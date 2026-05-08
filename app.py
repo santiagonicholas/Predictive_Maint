@@ -122,13 +122,13 @@ st.pyplot(fig2)
 # -----------------------------
 st.subheader("Try a Prediction")
 
-process_temp = st.number_input("Process temperature [°C] Max 28.8", value=28.5)
+process_temp = st.number_input("Process temperature [C] Max 28.8", value=28.5)
 rot_speed = st.number_input("Rotational speed [rpm] Max 1971.8", value=1938.7)
 torque = st.number_input("Torque [Nm] Max 0.826", value=0.492)
 noise = st.number_input("Noise (dB) Max 98.1", value=91.3)
 
 input_df = pd.DataFrame({
-    "Process temperature [°C]": [process_temp],
+    "Process temperature [C]": [process_temp],
     "Rotational speed [rpm]": [rot_speed],
     "Torque [Nm]": [torque],
     "Noise (dB)": [noise]
