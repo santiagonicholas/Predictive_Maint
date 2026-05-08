@@ -32,11 +32,11 @@ st.dataframe(data.head())
 # -----------------------------
 # Data Info
 # -----------------------------
-st.subheader("Dataset Information")
-st.write("Shape of dataset:", data.shape)
-st.write("Missing values by column:")
-st.write(data.isnull().sum())
-
+#st.subheader("Dataset Information")
+#st.write("Shape of dataset:", data.shape)
+#st.write("Missing values by column:")
+#st.write(data.isnull().sum())
+#
 # -----------------------------
 # Drop unnecessary columns
 # -----------------------------
@@ -88,35 +88,35 @@ st.write(f"Accuracy: {accuracy * 100:.2f}%")
 # -----------------------------
 # Confusion Matrix
 # -----------------------------
-st.subheader("Confusion Matrix")
-cm = confusion_matrix(y_test, y_pred)
-
-fig, ax = plt.subplots()
-disp = ConfusionMatrixDisplay(confusion_matrix=cm)
-disp.plot(ax=ax)
-plt.title("Confusion Matrix")
-st.pyplot(fig)
-
+#st.subheader("Confusion Matrix")
+#cm = confusion_matrix(y_test, y_pred)
+#
+#fig, ax = plt.subplots()
+#disp = ConfusionMatrixDisplay(confusion_matrix=cm)
+#disp.plot(ax=ax)
+#plt.title("Confusion Matrix")
+#st.pyplot(fig)
+#
 # -----------------------------
 # Feature Importance
 # -----------------------------
-st.subheader("Feature Importance")
-
-importance_df = pd.DataFrame({
-    "Feature": X.columns,
-    "Importance": model.feature_importances_
-}).sort_values(by="Importance", ascending=False)
-
-st.dataframe(importance_df.head(10))
-
-fig2, ax2 = plt.subplots(figsize=(8, 5))
-ax2.barh(importance_df["Feature"].head(10), importance_df["Importance"].head(10))
-ax2.invert_yaxis()
-ax2.set_title("Top 10 Most Important Features")
-ax2.set_xlabel("Importance")
-ax2.set_ylabel("Feature")
-st.pyplot(fig2)
-
+#st.subheader("Feature Importance")
+#
+#importance_df = pd.DataFrame({
+#    "Feature": X.columns,
+#    "Importance": model.feature_importances_
+#}).sort_values(by="Importance", ascending=False)
+#
+#st.dataframe(importance_df.head(10))
+#
+#fig2, ax2 = plt.subplots(figsize=(8, 5))
+#ax2.barh(importance_df["Feature"].head(10), importance_df["Importance"].head(10))
+#ax2.invert_yaxis()
+#ax2.set_title("Top 10 Most Important Features")
+#ax2.set_xlabel("Importance")
+#ax2.set_ylabel("Feature")
+#st.pyplot(fig2)
+#
 # -----------------------------
 # User Input Section
 # -----------------------------
