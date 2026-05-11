@@ -32,10 +32,10 @@ st.dataframe(data.head())
 # -----------------------------
 # Data Info
 # -----------------------------
-st.subheader("Dataset Information")
+#st.subheader("Dataset Information")
 st.write("Shape of dataset:", data.shape)
-st.write("Missing values by column:")
-st.write(data.isnull().sum())
+#st.write("Missing values by column:")
+#st.write(data.isnull().sum())
 #
 # -----------------------------
 # Drop unnecessary columns
