@@ -122,10 +122,10 @@ st.write(f"Accuracy: {accuracy * 100:.2f}%")
 # -----------------------------
 st.subheader("Try a Prediction")
 
-process_temp = st.number_input("Process temperature [C] Max 28.8", value=28.5)
-rot_speed = st.number_input("Rotational speed [rpm] Max 1971.8", value=1938.7)
-torque = st.number_input("Torque [Nm] Max 0.826", value=0.492)
-noise = st.number_input("Noise (dB) Max 98.1", value=91.3)
+process_temp = st.number_input("Process temperature [C] Min 28.3 Max 36.2", value=28.5)
+rot_speed = st.number_input("Rotational speed [rpm] Min 1149.8 Max 2275.3", value=1938.7)
+torque = st.number_input("Torque [Nm] Min 0.142 Max 0.826", value=0.492)
+noise = st.number_input("Noise (dB) Min 84.2 Max 98.1", value=91.3)
 
 input_df = pd.DataFrame({
     "Process temperature [C]": [process_temp],
